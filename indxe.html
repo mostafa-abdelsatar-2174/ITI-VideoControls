@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Range</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="color-range">
+        <div class="range-home">
+            <div>
+                <label for="RedValue"> The Red Value in The Text Color: </label>
+                <span>0</span>
+                <input type="range" name="RedValue" id="RedValue" min="0" max="255" step="1" value="255" >
+                <span>255</span>
+            </div>
+            <div>
+                <label for="GreenValue"> The Green Value in The Text Color: </label>
+                <span>0</span>
+                <input type="range" name="GreenValue" id="GreenValue" min="0" max="255" step="1" value="255">
+                <span>255</span>
+            </div>
+            <div>
+                <label for="BlueValue"> The Blue Value in The Text Color: </label>
+                <span>0</span>
+                <input type="range" name="BlueValue" id="BlueValue" min="0" max="255" step="1" value="255">
+                <span>255</span>
+            </div>
+            <p class="RGBcolor"></p>
+        </div>
+        <div class="text-container">
+            <h1 id="text-color">Say My Name: Abdelsatar</h1>
+        </div>
+    </div>
+    <div class="video-control">
+        <div class="video-container"> 
+            <video src="WhatsApp Video 2025-08-05 at 19.47.07_a9b9cff1.mp4" id="main-video" ></video>
+            <div class="progress">
+                <input id="seek" type="range" min="0" max="100" value="0" step="0.01" />
+                <div class="time" id="time" style="text-align: end;">00:00 / 00:00</div>
+            </div>
+        </div>
+        <div class="controls-container">
+            <div>
+            <button id="play">Play</button>
+            <button id="stop">Stop</button>
+            <button id="back10">&lt;&lt;(-10S)</button>
+            <button id="back5">&lt;(-5s)</button>
+            <button id="forward5">&gt;(+5s) </button>
+            <button id="forward10">&gt;&gt;(+10S)</button>
+            </div>
+            <div>
+                <button id="mute">Mute</button>
+                <label for="volume">Volume: </label>
+                <input id="volume" type="range" min="0" max="1" step="0.01" value="1" style="accent-color: gray;" />
+            </div>
+            <div class="last-div">
+                <div>
+                <label for="speed">Speed: </label>
+                <select id="speed" title="Speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+                </div>
+                <button id="fullscreen">Full Screen</button>
+            </div>
+        </div>
+    </div>
+    <script src="textcolor.js"></script>
+    <script src="videocontrol.js"></script>
+</body>
+</html>
